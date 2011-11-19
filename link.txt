@@ -1,0 +1,15 @@
+// TITLE: let me google that for you 
+// KEYWORD: lmgtfy letmegooglethatforyou
+http://lmgtfy.com/
+
+// TITLE: Google C++ Style Guide
+// KEYWORD: cpp googlecpp googlec++ cppstyle style
+http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
+
+// TITLE: Google c-style.el
+// KEYWORD: emacs google c stype el
+http://google-styleguide.googlecode.com/svn/trunk/google-c-style.el
+
+// TITLE: C++ FQA Lite
+// KEYWORD: cpp fqa fqa
+http://yosefk.com/c++fqa/index.html
