@@ -1,0 +1,16 @@
+[user]
+	name = badaud_t
+	email = thomas.badaud@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	ci = commit
+        co = checkout
+	st = status
+	del = rm
+	pul = pull
+	bifle = blame
+[core]
+	editor = ne
