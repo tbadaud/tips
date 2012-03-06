@@ -1,0 +1,19 @@
+;;; .loaddefs.el --- automatically extracted autoloads
+;;
+;;; Code:
+
+
+;;;### (autoloads nil nil ("auto-complete/auto-complete-config.el"
+;;;;;;  "auto-complete/auto-complete.el" "auto-complete/fuzzy.el"
+;;;;;;  "auto-complete/popup.el" "el-get/el-get-install.el" "el-get/el-get.el")
+;;;;;;  (20090 24796 519700))
+
+;;;***
+
+(provide '.loaddefs)
+;; Local Variables:
+;; version-control: never
+;; no-update-autoloads: t
+;; coding: utf-8
+;; End:
+;;; .loaddefs.el ends here
