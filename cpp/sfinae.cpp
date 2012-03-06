@@ -1,6 +1,6 @@
 // TITLE: Substitution failure is not an error
 // KEYWORD: sfinae reflexivite template
-
+// OTHER LINK : http://stackoverflow.com/questions/257288/is-it-possible-to-write-a-c-template-to-check-for-a-functions-existence
 #include <iostream>
  
 template <typename T>
