@@ -1,4 +1,7 @@
 #!/bin/bash
 
-ln -s tips/gitconfig ~/.gitconfig
 ln -s tips/bashrc ~/.bashrc
+
+ln -s tips/gitconfig ~/.gitconfig
+ln -s tips/gitignore ~/.gitconfig
+

@@ -1,0 +1,9 @@
+*~
+
+vgcore.*
+*.core
+
+*.o
+*.class
+
+Thumbs.db
