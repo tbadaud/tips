@@ -14,4 +14,4 @@
 	bifle = blame
 [core]
 	editor = ne
-	excludefile = ~/.gitignore
+	excludesfile = /home/badaud_t/.gitignore
