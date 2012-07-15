@@ -9,9 +9,9 @@
 (setq user-nickname "Thomas Badaud")
 
 
-;;(async-shell-command "/home/badaud_t/suce")
-;;(sys:run-shell-command "sh echo suce > /tmp/suce" : wait nil)
-;;(sys:run "echo suce > /tmp/suce")
+;;(async-shell-command "/home/badaud_t/toto")
+;;(sys:run-shell-command "sh echo toto > /tmp/toto" : wait nil)
+;;(sys:run "echo toto > /tmp/toto")
 
 (load-file "~/.emacs.d/codeworker/badaud.el")
 ;; (add-to-list 'load-path "~/.emacs.d/codeworker/")
