@@ -6,4 +6,6 @@ vgcore.*
 *.o
 *.class
 
+*.pyc
+
 Thumbs.db

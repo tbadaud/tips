@@ -3,7 +3,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-PS1="b> "
+PS1="b@\W> "
 
 ulimit -c unlimited #coredump
 
@@ -20,6 +20,7 @@ shopt -s checkwinsize
 shopt -s cdspell                # autocorrects cd misspellings
 shopt -s nocaseglob             # pathname expansion will be treated
                                 # as case-insensitive
+#set completion-ignore-case on
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
