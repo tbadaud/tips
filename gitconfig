@@ -1,17 +1,19 @@
 [user]
-	name = badaud_t
-	email = thomas@badaud.fr
+        name = badaud_t
+        email = thomas@badaud.fr
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+        diff = auto
+        status = auto
+        branch = auto
 [alias]
-	ci = commit
+        ci = commit
         co = checkout
-	st = status
-	del = rm
-	pul = pull
-	bifle = blame
+        st = status
+        del = rm
+        pul = pull
+        bifle = blame
 [core]
-	editor = ne
-	excludesfile = /home/badaud_t/.gitignore
+        editor = emacs
+        excludesfile = ~/.gitignore
+#       autocrlf = input
+#	eol = lf
