@@ -13,3 +13,20 @@ http://google-styleguide.googlecode.com/svn/trunk/google-c-style.el
 // TITLE: C++ FQA Lite
 // KEYWORD: cpp fqa fqa
 http://yosefk.com/c++fqa/index.html
+
+// TITLE: SQL UML en ligne
+// KEYWORD: SQL UML DESIGN BDD
+http://ondras.zarovi.cz/sql/demo/
+
+// TITLE: GLIFFY
+// KEYWORD: UML ONLINE SCHEMA DESSIN RESEAU ORGANIGRAM
+http://www.gliffy.com/
+
+
+// TITLE: DESIGN HTML PROTOTYPES
+// KEYWORD: AXURE BALSAMIQ HTML PROTOTYPES MOCKUPS
+http://www.mockflow.com/ http://www.balsamiq.com/ http://www.axure.com/
+
+// TITLE: COLOR IDEAS
+// KEYWORD: COLOR IDEAS INSPIRATION THEMES CHROMATIQUES
+http://www.colourlovers.com/ http://kuler.adobe.com
