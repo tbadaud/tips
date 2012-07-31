@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# http://abs.traduc.org/abs-fr/apl.html
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -21,6 +23,7 @@ shopt -s cdspell                # autocorrects cd misspellings
 shopt -s nocaseglob             # pathname expansion will be treated
                                 # as case-insensitive
 #set completion-ignore-case on
+#shopt -s extglob
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
@@ -37,6 +40,8 @@ alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -A'
 alias df='df -h'
+alias codeworker='codeworker -nologo'
+alias bc='bc -q'
 
 # Bash Color
 txtblk='\033[0;30m' # Black - Regular
@@ -86,4 +91,37 @@ fclean() {
 	SEARCH="$1"
     fi
     find ${SEARCH} \( -name "*~" -or -name ".*~" -or -name "*\#" -or -name "*.core" \) -exec rm -fv {} \;
+}
+
+mail() {
+    # tips: `cat FILENAME`
+    echo -n "subject: "; read subject
+    echo -n "from [$USER@$HOSTNAME]: "; read from
+    to=""
+    while [ -z $to ]; do
+        echo -n "to [required]: "; read to
+    done
+
+    if [ -z "$from" ]; then from="$USER@$HOSTNAME"; fi
+
+    file="/tmp/mail_$USER"`date "+%s"`
+    echo -e "Date: "`date`"\nSubject: "$subject"\nFrom: "$from"\nTo: "$to"\n\n" > "$file"
+
+    echo "write your message (send character is ctrl+D)"
+    while read line; do
+        res=$(echo "$line" | grep -E "^\`cat\ .*\`$")
+        if [  -n "$res" ]; then
+            res=$(echo $res | cut -d'`' -f2)
+            echo -e "\n- - - -" >> "$file"
+            echo "\$\> $res" >> "$file"
+            eval $res" >> ""$file"
+            echo -e "- - - -\n" >> "$file"
+        else
+            echo "$line" >> "$file"
+        fi
+
+    done
+
+    /usr/sbin/sendmail -t < "$file"
+    rm "$file"
 }
