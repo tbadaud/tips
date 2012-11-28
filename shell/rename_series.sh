@@ -1,0 +1,1 @@
+for file in `ls`; do mv $file `echo $file` | sed 's/.*S\([0-9][0-9]\)E\([0-9][0-9]\).*\.\([avi|srt]\)/S\1E\2.\3/'`; done
