@@ -1,0 +1,1 @@
+(:el-get "installed" :auto-complete "installed" :cmake-mode "installed")
