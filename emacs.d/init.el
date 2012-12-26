@@ -13,9 +13,14 @@
 ;;(sys:run-shell-command "sh echo toto > /tmp/toto" : wait nil)
 ;;(sys:run "echo toto > /tmp/toto")
 
-(load-file "~/.emacs.d/codeworker/badaud.el")
+;; (load-file "~/.emacs.d/codeworker/badaud.el")
 ;; (add-to-list 'load-path "~/.emacs.d/codeworker/")
 ;; (require 'codeworker)
+
+;;(load-file "~/.emacs.d/python.el")
+;;(require 'python)
+;;(add-to-list 'auto-mode-alist '("\\.py\\" . python))
+
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
@@ -27,6 +32,10 @@
 (global-set-key [f5] 'goto-line)
 
 (column-number-mode 1)
+
+;;(setq-default indent-tabs-mode nil)
+;; (setq-default tab-width 2)
+;;(setq-default js-indent-level 2)
 
 ;; (normal-erase-is-backspace-mode)
 
