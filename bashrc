@@ -40,14 +40,18 @@ alias codeworker='codeworker -nologo'
 alias bc='bc -q'
 
 # use ps ax ?
-if [ `ps x | grep emacs | wc -l` -lt 1 ]; then
+if [ `ps x | grep emacs | grep -v grep | wc -l` -lt 1 ]; then
     emacs --daemon
 fi
 
 alias ne='emacsclient -t'
 
+alias halt='sudo halt'
+
 export EDITOR='emacsclient -t'
 export PAGER='less'
+
+setterm -blength 0
 
 # Bash Color
 txtblk='\033[0;30m' # Black - Regular
