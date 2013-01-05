@@ -46,6 +46,8 @@ fi
 
 alias ne='emacsclient -t'
 
+#recode ISO-8859-1..UTF8 FILE
+
 alias halt='sudo halt'
 
 export EDITOR='emacsclient -t'
