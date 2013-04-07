@@ -15,5 +15,5 @@
 [core]
         editor = emacs
         excludesfile = ~/.gitignore
-#       autocrlf = input
+		autocrlf = true
 #	eol = lf

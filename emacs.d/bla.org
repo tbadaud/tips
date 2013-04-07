@@ -1,0 +1,46 @@
+
+#+STARTUP: showall
+
+* Config first
+
+  - Il faut htmlize d'installer d'abord:
+    http://emacswiki.org/emacs/Htmlize
+    
+  Ensuite tu peux faire =C-c C-c= au milieu du bloc de code suivant:
+
+  #+begin_src emacs-lisp
+    (require 'org)  
+    (require 'htmlize)
+    (setq org-src-fontify-natively t)
+    (message "Org-Mode configured successfully !")
+  #+end_src
+
+  #+RESULTS:
+  : Org-Mode configured successfully !
+
+  Reload le fichier courant avec =C-x C-v RET=.
+
+  Ensuite tu peux voir l'export de code dans la section suivante, pour
+  exporter le buffer utilise =C-c C-e= puis =b= ou =h= pour HTML
+  export.
+
+** Example of source code + text
+
+   Blablabla, ici je décris le code qui suit, ce code est *awesome*!
+
+   #+begin_src c
+     struct awesome
+     {
+       int funny;
+       int smart;
+     };
+   #+end_src
+
+
+   Un peu de Python car faut avouer que c'est sympa comme langage.
+
+   #+begin_src python
+     class Bob(object):
+         def __init__(self):
+             pass
+   #+end_src

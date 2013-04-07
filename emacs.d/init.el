@@ -3,19 +3,28 @@
 ;; C-w (kill select)
 ;; M-w (cpy select)
 
-;; (load "std.el")
-;; (load "std_comment.el")
-
 (setq user-nickname "Thomas Badaud")
 
-
-;;(async-shell-command "/home/badaud_t/toto")
-;;(sys:run-shell-command "sh echo toto > /tmp/toto" : wait nil)
-;;(sys:run "echo toto > /tmp/toto")
+(custom-set-variables
+ '(column-number-mode t)
+ '(cua-mode t nil (cua-base))
+ '(inhibit-startup-screen t)
+ '(scroll-bar-mode nil)
+ '(tool-bar-mode nil)
+;; '(blink-cursor-mode nil))
+)
 
 ;; (load-file "~/.emacs.d/codeworker/badaud.el")
 ;; (add-to-list 'load-path "~/.emacs.d/codeworker/")
 ;; (require 'codeworker)
+
+;;(add-to-list 'load-path "~/.emacs.d/tuareg-2.0.6/")
+;;(load "~/.emacs.d/tuareg-2.0.6/tuareg-site-file")
+
+;;(load-file "~/.emacs.d/htmlize.el")
+
+(add-to-list 'auto-mode-alist '("\\.pl\\'" . prolog-mode))
+
 
 ;;(load-file "~/.emacs.d/python.el")
 ;;(require 'python)
@@ -45,10 +54,10 @@
 (column-number-mode 1)
 
 ;;(setq-default indent-tabs-mode nil)
-;; (setq-default tab-width 2)
+;;(setq-default tab-width 2)
 ;;(setq-default js-indent-level 2)
 
-;; (normal-erase-is-backspace-mode)
+;;(normal-erase-is-backspace-mode)
 
 
 ;;; new macro declare-abbrevs -- similar to define-abbrev-table
