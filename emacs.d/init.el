@@ -14,6 +14,20 @@
 ;; '(blink-cursor-mode nil))
 )
 
+(global-set-key [f5] 'goto-line)
+
+;;(normal-erase-is-backspace-mode)
+(setq-default indent-tabs-mode nil)
+;;(setq-default tab-width 2)
+;;(setq-default indent-for-tab-command 2)
+;;(setq-default c-basic-offset 2)
+;;(add-hook 'python-mode-hook '(lambda ()
+;; (setq python-indent 2)))
+;;(setq-default js-indent-level 2)
+
+;; chmod +x si shebang
+(add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
+
 ;; (load-file "~/.emacs.d/codeworker/badaud.el")
 ;; (add-to-list 'load-path "~/.emacs.d/codeworker/")
 ;; (require 'codeworker)
@@ -24,12 +38,13 @@
 ;;(load-file "~/.emacs.d/htmlize.el")
 
 (add-to-list 'auto-mode-alist '("\\.pl\\'" . prolog-mode))
-
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ;;(load-file "~/.emacs.d/python.el")
 ;;(require 'python)
 ;;(add-to-list 'auto-mode-alist '("\\.py\\" . python))
 
+;;http://emacswiki.org/emacs/MultipleModes
 (load-file "~/.emacs.d/multi-web-mode.el")
 ;;(add-to-list 'load-path "~/.emacs.d/")
 ;;(require '~/.emacs.d/multi-web-mode.el)
@@ -41,23 +56,13 @@
 (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
 (multi-web-global-mode 1)
 
-
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-
+(setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist)) 
+(autoload 'tuareg-mode "tuareg" "Mode majeur pour éditer du code Caml" t) 
+(autoload 'camldebug "camldebug" "Exécuter le débogueur Caml" t)
 
 (add-hook 'auto-complete-mode-hook (lambda ()
 				     (setq ac-sources (remq 'ac-source-filename ac-sources)))
 	  t)
-
-(global-set-key [f5] 'goto-line)
-
-(column-number-mode 1)
-
-;;(setq-default indent-tabs-mode nil)
-;;(setq-default tab-width 2)
-;;(setq-default js-indent-level 2)
-
-;;(normal-erase-is-backspace-mode)
 
 
 ;;; new macro declare-abbrevs -- similar to define-abbrev-table
@@ -126,6 +131,3 @@
 ;; Align with keyboard !
 (global-set-key (kbd "C-c a") 'align-region-or-current)
 (global-set-key (kbd "C-c A") 'align-regexp)
-;; ***************************************
-;;			FIN ALIGNEMENT
-;; ***************************************
