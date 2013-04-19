@@ -9,7 +9,8 @@ m="";
 function rename_file() {
     m=$(echo "$1" | sed 's/,//');
     ext=$(echo "$m" | rev | cut -d'.' -f1 | rev);    
-    nm=$(echo "$m" | sed 's/.*\([0-9]\)x\([0-9]*\).*/0\1E\2.'$ext'/');
+    nm=$(echo "$m" | sed 's/.*\([0-9]\)[eExX]\([0-9]*\).*/0\1E\2.'$ext'/');
+    #echo $nm
     mv "$m" "$nm";
 }
 
