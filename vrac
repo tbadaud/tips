@@ -1,0 +1,24 @@
++++ phpmyadmin no root +++
+/etc/phpmyadmin/config.inc.php:
+	$cfg['Servers'][$i]['AllowRoot'] = FALSE;
+	se deco, puis se reco
+
++++ apache eip +++
+
+/etc/apache2/ports.conf
+NameVirtualHost *:80
+Listen 80
+NameVirtualHost *:8080
+Listen 8080
+
+a2enmod/a2dismod / a2ensite/a2dissite
+apt-get install libapache2-mod-wsgi libapache2-mod-rpaf
+a2enmod headers
+
+<VirtualHost *:80 *:8080>
+	     ServerName toto.fr
+	     ServerAlias titi.com
+	     
+	     WSGIPassAuthorization On
+	     Header set Access-Control-Allow-Headers "Authorization"
+</VirtualHost>
