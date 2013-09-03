@@ -31,6 +31,11 @@ fi
 
 alias reload='. ~/.bashrc'
 
+alias fcdl='find animateur cdl client communes contact magasin prestation snippets script static -not -name '\''*.pyc'\'' -not -type d'
+alias fcdlcode='find animateur cdl client communes contact magasin prestation snippets script static -name '\''*.py'\'' -or -name '\''*.html'\'' -or -name '\''*.css'\'' -or -name '\''*.js'\'' -or -name '\''*.pro'\'' -or -name '\''*.cwp'\'' -or -name '\''*.cws'\'' -or -name '\''*.sh'\'
+alias fcdlpy='find animateur cdl client communes contact magasin prestation snippets script static -name '\''*.py'\'
+
+alias ne='emacs'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -lh'
@@ -40,11 +45,10 @@ alias codeworker='codeworker -nologo'
 alias bc='bc -q'
 
 # use ps ax ?
-if [ `ps x | grep emacs | grep -v grep | wc -l` -lt 1 ]; then
-    emacs --daemon
-fi
-
-alias ne='emacsclient -t'
+# if [ `ps x | grep emacs | grep -v grep | wc -l` -lt 1 ]; then
+#    emacs --daemon
+# fi
+# alias ne='emacsclient -t'
 
 #recode ISO-8859-1..UTF8 FILE
 
