@@ -16,6 +16,14 @@
 
 (global-set-key [f5] 'goto-line)
 
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+; Corrige Ctrl+left/right
+(global-set-key "\M-OC" 'backward-word)
+(global-set-key "\M-OD" 'forward-word)
+
 ;;(normal-erase-is-backspace-mode)
 (setq-default indent-tabs-mode nil)
 ;;(setq-default tab-width 2)
