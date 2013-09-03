@@ -2,6 +2,8 @@
 
 ln -s tips/bashrc ~/.bashrc
 
+ln -s tips/emacs.d ~/.emacs.d
+
 ln -s tips/gitconfig ~/.gitconfig
-ln -s tips/gitignore ~/.gitconfig
+ln -s tips/gitignore ~/.gitignore
 

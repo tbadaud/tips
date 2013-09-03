@@ -29,12 +29,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export EDITOR='emacs'
-export PAGER='less'
-
 alias reload='. ~/.bashrc'
 
-alias ne='emacs'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -lh'
@@ -42,6 +38,22 @@ alias la='ls -A'
 alias df='df -h'
 alias codeworker='codeworker -nologo'
 alias bc='bc -q'
+
+# use ps ax ?
+if [ `ps x | grep emacs | grep -v grep | wc -l` -lt 1 ]; then
+    emacs --daemon
+fi
+
+alias ne='emacsclient -t'
+
+#recode ISO-8859-1..UTF8 FILE
+
+alias halt='sudo halt'
+
+export EDITOR='emacsclient -t'
+export PAGER='less'
+
+setterm -blength 0
 
 # Bash Color
 txtblk='\033[0;30m' # Black - Regular

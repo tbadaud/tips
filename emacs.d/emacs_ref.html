@@ -1,0 +1,315 @@
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Udo Puetz">
+   <META NAME="GENERATOR" CONTENT="Xemacs">
+   <META NAME="robots" CONTENT="follow">
+   <META NAME="keywords" CONTENT="linux unix programming coding beginner newbie">
+   <META NAME="description" CONTENT="This site is intended for programming beginners or changers from win who want to know how to program under gnu/linux.">
+   <META NAME="author" CONTENT="robos">
+<TITLE>
+Emacs Commands List 
+</TITLE>
+</HEAD>
+<BODY BACKGROUND="/pictures/background1.jpg">
+
+<CENTER> <A href="http://sourceforge.net"> <IMG src="http://sourceforge.net/sflogo.php?group_id=22375" width="88" height="31" border="0" alt="SourceForge Logo"></A> </CENTER>
+
+<FONT SIZE=3>
+<u>
+Emacs Commands List <!-- DAS HIER ÄNDERN -->
+</u>
+<br> 
+
+<br>
+C = Control<br>
+M = Meta = Alt|Esc<br>
+<br>
+Basics<br>
+<code>C-x C-f  </code>"find" file i.e. open/create a file in buffer<br>
+<code>C-x C-s  </code>save the file<br>
+<code>C-x C-w  </code>write the text to an alternate name<br>
+<code>C-x C-v  </code>find alternate file<br>
+<code>C-x i  </code>insert file at cursor position<br>
+<code>C-x b  </code>create/switch buffers<br>
+<code>C-x C-b  </code>show buffer list<br>
+<code>C-x k  </code>kill buffer<br>
+<code>C-z  </code>suspend emacs <br>
+<code>C-X C-c  </code>close down emacs<br>
+<br>
+Basic movement<br>
+<code>C-f  </code>forward char<br>
+<code>C-b  </code>backward char<br>
+<code>C-p  </code>previous line<br>
+<code>C-n  </code>next line<br>
+<code>M-f  </code>forward one word<br>
+<code>M-b  </code>backward one word<br>
+<code>C-a  </code>beginning of line<br>
+<code>C-e  </code>end of line<br>
+<code>C-v  </code>one page up<br>
+<code>M-v  </code>scroll down one page<br>
+<code>M-<  </code>beginning of text<br>
+<code>M->  </code>end of text<br>
+<br>
+Editing<br>
+<code>M-n  </code>repeat the following command n times<br>
+<code>C-u  </code>repeat the following command 4 times<br>
+<code>C-u n  </code>repeat n times<br>
+<code>C-d  </code>delete a char<br>
+<code>M-d  </code>delete word<br>
+<code>M-Del  </code>delete word backwards<br>
+<code>C-k  </code>kill line<br>
+<br>
+<code>C-Space  </code>Set beginning mark (for region marking for example)<br>
+<code>C-W  </code>"kill" (delete) the marked region region<br>
+<code>M-W  </code>copy the marked region<br>
+<code>C-y  </code>"yank" (paste) the copied/killed region/line<br>
+<code>M-y  </code>yank earlier text (cycle through kill buffer)<br>
+<code>C-x C-x  </code>exchange cursor and mark<br>
+<br>
+<code>C-t  </code>transpose two chars<br>
+<code>M-t  </code>transpose two words<br>
+<code>C-x C-t  </code>transpose lines<br>
+<code>M-u  </code>make letters uppercase in word from cursor position to end<br>
+<code>M-c  </code>simply make first letter in word uppercase<br>
+<code>M-l  </code>opposite to M-u<br>
+<br>
+Important<br>
+<code>C-g  </code>quit the running/entered command<br>
+<code>C-x u  </code>undo previous action<br>
+<code>M-x revert-buffer RETURN  </code>(insert like this) undo all changes since last save<br>
+<code>M-x recover-file RETURN  </code>Recover text from an autosave-file<br>
+<code>M-x recover-session RETURN  </code>if you edited several files<br>
+<br>
+Online-Help<br>
+<code>C-h c  </code>which command does this keystroke invoke<br>
+<code>C-h k  </code>which command does this keystroke invoke and what does it do?<br>
+<code>C-h l  </code>what were my last 100 typed keys<br>
+<code>C-h w  </code>what key-combo does this command have?<br>
+<code>C-h f  </code>what does this function do<br>
+<code>C-h v  </code>what's this variable and what is it's value<br>
+<code>C-h b  </code>show all keycommands for this buffer<br>
+<code>C-h t  </code>start the emacs tutorial<br>
+<code>C-h i  </code>start the info reader<br>
+<code>C-h C-k  </code>start up info reader and go to a certain key-combo point<br>
+<code>C-h F  </code>show the emacs FAQ<br>
+<code>C-h p  </code>show infos about the Elisp package on this machine<br>
+<br>
+Search/Replace<br>
+<code>C-s  </code>Search forward<br>
+<code>C-r  </code>search backward<br>
+<code>C-g  </code>return to where search started (if you are still in search mode)<br>
+<code>M-%  </code>query replace<br>
+<blockquote><p><code>    Space or y  </code>replace this occurence<br>
+<code>    Del or n  </code>don't replace<br>
+<code>    .  </code>only replace this and exit (replace)<br>
+<code>    ,  </code>replace and pause (resume with Space or y)<br>
+<code>    !  </code>replace all following occurences<br>
+<code>    ^  </code>back to previous match<br>
+<code>    RETURN or q  </code>quit replace</p></blockquote><br>
+
+Search/Replace with regular expressions<br>
+Characters to use in regular expressions:<br>
+<code>^  </code>beginning of line<br>
+<code>$  </code>end of line<br>
+<code>.  </code>single char<br>
+<code>.*  </code>group or null of chars<br>
+<code>\<  </code>beginning of a word<br>
+<code>\>  </code>end of a word<br>
+<code>[]  </code>every char inside the backets (for example [a-z] means every small letter)<br>
+<br>
+<code>M C-s RETURN  </code>search for regular expression forward<br>
+<code>M C-r RETURN  </code>search for regular expression backward<br>
+<code>M C-s  </code>incremental search<br>
+<code>C-s  </code>repeat incremental search<br>
+<code>M C-r  </code>incremental search backwards<br>
+<code>C-r  </code>repeat backwards<br>
+<code>M-x query-replace-regexp  </code>search and replace<br>
+
+    <br>
+Window-Commands<br>
+<code>C-x 2  </code>split window vertically<br>
+<code>C-x o  </code>change to other window<br>
+<code>C-x 0  </code>delete window<br>
+<code>C-x 1  </code>close all windows except the one the cursors in<br>
+<code>C-x ^  </code>enlarge window<br>
+<code>M-x shrink-window  </code>command says it ;-)<br>
+<code>M C-v  </code>scroll other window<br>
+<code>C-x 4 f  </code>find file in other window<br>
+<code>C-x 4 o  </code>change to other window<br>
+<code>C-x 4 0  </code>kill buffer and window<br>
+<code>C-x 5 2  </code>make new frame<br>
+<code>C-x 5 f  </code>find file in other frame<br>
+<code>C-x 5 o  </code>change to other frame<br>
+<code>C-x 5 0  </code>close this frame<br>
+<br>
+Bookmark commands<br>
+<code>C-x r m  </code>set a bookmark at current cursor pos<br>
+<code>C-x r b  </code>jump to bookmark<br>
+<code>M-x bookmark-rename  </code>says it<br>
+<code>M-x bookmark-delete  </code>	"<br>
+<code>M-x bookmark-save</code> 	"<br>
+<code>C-x r l  </code>list bookmarks<br>
+<blockquote><p><code>    d  </code>mark bookmark for deletion<br>
+<code>    r  </code>rename bookmark<br>
+<code>    s  </code>save all listed bookmarks<br>
+<code>    f  </code>show bookmark the cursor is over<br>
+<code>    m  </code>mark bookmarks to be shown in multiple window<br>
+<code>    v  </code>show marked bookmarks (or the one the cursor is over)<br>
+<code>    t  </code>toggle listing of the corresponding paths<br>
+<code>    w  </code>	     	     " 	    		  path to this file<br>
+<code>    x  </code>delete marked bookmarks<br>
+<code>    Del  </code>     ?<br>
+<code>    q  </code>quit bookmark list</p></blockquote><br>
+<code>M-x bookmark-write  </code>write all bookmarks in given file<br>
+<code>M-x bookmark-load  </code>load bookmark from given file<br>
+<br>
+Shell<br>
+<code>M-x shell  </code>starts shell modus<br>
+<code>C-c C-c  </code>same as C-c under unix (stop running job)<br>
+<code>C-d  </code>delete char forward<br>
+<code>C-c C-d  </code>Send EOF<br>
+<code>C-c C-z  </code>suspend job (C-z under unix)<br>
+<code>M-p  </code>show previous commands<br>
+<br>
+DIRectory EDitor (dired)<br>
+<code>C-x d  </code>start up dired<br>
+<code>C  </code>(large C) copy <br>
+<code>d  </code>mark for erase<br>
+<code>D  </code>delete right away<br>
+<code>e or f  </code>open file or directory<br>
+<code>g  </code>reread directory structure from file<br>
+<code>G  </code>change group permissions (chgrp)<br>
+<code>k  </code>delete line from listing on screen (don't actually delete)<br>
+<code>m  </code>mark with *<br>
+<code>n  </code>move to next line<br>
+<code>o  </code>open file in other window and go there<br>
+<code>C-o  </code>open file in other window but don't change there<br>
+<code>P  </code>print file<br>
+<code>q  </code>quit dired<br>
+<code>Q  </code>do query-replace in marked files<br>
+<code>R  </code>rename file<br>
+<code>u  </code>remove mark<br>
+<code>v  </code>view file content<br>
+<code>x  </code>delete files marked with D<br>
+<code>z  </code>compress file<br>
+<code>M-Del  </code>remove all marks (whatever kind)<br>
+<code>~  </code>mark backup files (name~ files) for deletion<br>
+<code>#  </code>mark auto-save files (#name#) for deletion<br>
+<code>*/  </code>mark directory with * (C-u * removes that mark again)<br>
+<code>=  </code>compare this file with marked file<br>
+<code>M-=  </code>compare this file with it's backup file<br>
+<code>!  </code>apply shell command to this file<br>
+<code>M-}  </code>change to the next file marked with * od D<br>
+<code>M-{  </code>      "       previous     "<br>
+<code>% d  </code>mark files described through regular expression for deletion<br>
+<code>% m  </code>             "                                  (with *)<br>
+<code>+  </code>create directory<br>
+<code>>  </code>changed to next dir<br>
+<code><  </code>change to previous dir<br>
+<code>s  </code>toggle between sorting by name or date<br>
+<br>
+Maybe into this category also fits this command:<br>
+<code>M-x speedbar  </code>starts up a separate window with a directory view<br>
+<br>
+Telnet<br>
+<code>M-x telnet  </code>starts up telnet-modus<br>
+<code>C-d  </code>either delete char or send EOF<br>
+<code>C-c C-c  </code>stop running job (similar to C-c under unix)<br>
+<code>C-c C-d  </code>send EOF<br>
+<code>C-c C-o  </code>clear output of last command<br>
+<code>C-c C-z  </code>suspend execution of command<br>
+<code>C-c C-u  </code>kill line backwards<br>
+<code>M-p  </code>recall previous command<br>
+<br>
+Text<br>
+Works only in text mode <br>
+<code>M-s  </code>center line<br>
+<code>M-S  </code>center paragraph<br>
+<code>M-x center-region  </code>name says <br>
+<br>
+Macro-commands<br>
+<code>C-x (  </code>start macro definition<br>
+<code>C-x )  </code>end of macro definition<br>
+<code>C-x e  </code>execute last definied macro<br>
+<code>M-n C-x e  </code>execute last defined macro n times<br>
+<code>M-x name-last-kbd-macro  </code>give name to macro (for saving)<br>
+<code>M-x insert-keyboard-macro  </code>save named macro into file<br>
+<code>M-x load-file  </code>load macro<br>
+<code>M-x macroname  </code>execute macroname<br>
+<br>
+Programming<br>
+<code>M C-\  </code>indent region between cursor and mark<br>
+<code>M-m  </code>move to first (non-space) char in this line<br>
+<code>M-^  </code>attach this line to previous<br>
+<code>M-;  </code>formatize and indent comment<br>
+     C, C++ and Java Modes<br>
+<code>M-a  </code>beginning of statement<br>
+<code>M-e  </code>end of statement<br>
+<code>M C-a  </code>beginning of function<br>
+<code>M C-e  </code>end of function<br>
+<code>C-c RETURN  </code>Set cursor to beginning of function and mark at the end<br>
+<code>C-c C-q  </code>indent the whole function according to indention style<br>
+<code>C-c C-a  </code>toggle modus in which after electric signs (like {}:';./*) emacs does the indention<br>
+<code>C-c C-d  </code>toggle auto hungry mode in which emacs deletes groups of spaces with one del-press<br>
+<code>C-c C-u  </code>go to beginning of this preprocessor statement<br>
+<code>C-c C-c  </code>comment out marked area<br>
+     More general (I guess)<br>
+<code>M-x outline-minor-mode  </code>collapses function definitions in a
+file to a mere {...} <br>
+<code>M-x show-subtree  </code>If you are in one of the collapsed functions,
+this un-collapses it <br>
+In order to achive some of the feats coming up now you have to run etags *.c
+*.h *.cpp (or what ever ending you source files have) in the source
+directory<br>
+<code>M-.  </code>(Thats Meta dot) If you are in a function call, this will
+take you to it's definition <br>
+<code>M-x tags-search ENTER  </code>Searches through all you etaged <br>
+<code>M-,  </code>(Meta comma) jumps to the next occurence for tags-search <br>
+<code>M-x tags-query-replace  </code>yum. This lets you replace some text in
+all the tagged files <br>
+<code>  </code> <br>
+
+<br>
+GDB (Debugger)<br>
+<code>M-x gdb  </code>starts up gdm in an extra window<br>
+
+
+
+<br>
+Version Control<br>
+<code>C-x v d  </code>show all registered files in this dir<br>
+<code>C-x v =  </code>show diff between versions<br>
+<code>C-x v u  </code>remove all changes since last checkin<br>
+<code>C-x v ~  </code>show certain version in different window<br>
+<code>C-x v l  </code>print log<br>
+<code>C-x v i  </code>mark file for version control add<br>
+<code>C-x v h  </code>insert version control header into file<br>
+<code>C-x v r  </code>check out named snapshot<br>
+<code>C-x v s  </code>create named snapshot<br>
+<code>C-x v a  </code>create changelog file in gnu-style<br>
+
+
+</FONT>
+
+<HR WIDTH="100%">
+<CENTER><EM><FONT FACE="Arial"><FONT COLOR="#0000FF"><FONT SIZE=+3>NEWS</FONT></FONT></FONT></EM></CENTER>
+<FONT SIZE=3>
+<BR><FONT SIZE=2>
+8.1.2002: The first part comes here <!-- DAS HIER ÄNDERN -->
+
+</FONT>
+
+<HR WIDTH="100%">
+ <FONT SIZE=+1>
+Last update: 8.1.2002  <!-- DAS HIER ÄNDERN -->
+
+</FONT>
+</BODY>
+</HTML>
+
+
+
+
+
