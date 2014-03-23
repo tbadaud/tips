@@ -1,0 +1,11 @@
+*~
+
+vgcore.*
+*.core
+
+*.o
+*.class
+
+*.pyc
+
+Thumbs.db
