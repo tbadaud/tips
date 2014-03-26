@@ -1,0 +1,18 @@
+[ui]
+username = Thomas BADAUD <thomas@badaud.fr>
+editor = vim
+
+[extensions]
+# http://mercurial.selenic.com/wiki/UsingExtensions?action=show&redirect=Extensions
+color =
+pager = 
+graphlog =
+purge =
+flow = $HOME/work/tips/hgflow.py
+commits = $HOME/work/tips/commits.py
+# hgview: http://www.logilab.org/project/hgview
+# checkfiles http://mercurial.selenic.com/wiki/CheckFilesExtension
+
+[pager]
+pager = LESS='FSRX' less
+ignore = version, update, flow init
