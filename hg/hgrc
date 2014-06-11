@@ -8,11 +8,12 @@ color =
 pager = 
 graphlog =
 purge =
-flow = $HOME/work/tips/hgflow.py
-commits = $HOME/work/tips/commits.py
+# flow = $HOME/work/tips/hg/hgflow.py
+# commits = $HOME/work/tips/hg/commits.py
 # hgview: http://www.logilab.org/project/hgview
 # checkfiles http://mercurial.selenic.com/wiki/CheckFilesExtension
-
+rebase = 
+mq = 
 [pager]
 pager = LESS='FSRX' less
 ignore = version, update, flow init
